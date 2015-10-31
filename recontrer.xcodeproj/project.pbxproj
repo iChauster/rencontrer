@@ -14,6 +14,11 @@
 		EDDBA2021BE437F7005E05A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDBA2001BE437F7005E05A1 /* LaunchScreen.storyboard */; };
 		EDDBA20D1BE437F7005E05A1 /* recontrerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDBA20C1BE437F7005E05A1 /* recontrerTests.swift */; };
 		EDDBA2181BE437F7005E05A1 /* recontrerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDBA2171BE437F7005E05A1 /* recontrerUITests.swift */; };
+		EDDBA2341BE43F02005E05A1 /* libGTLTouchStaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDBA22F1BE43ED9005E05A1 /* libGTLTouchStaticLib.a */; };
+		EDDBA2371BE43F02005E05A1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDBA2351BE43F02005E05A1 /* Security.framework */; };
+		EDDBA2381BE43F02005E05A1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDBA2361BE43F02005E05A1 /* SystemConfiguration.framework */; };
+		EDDBA23A1BE43FA6005E05A1 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDBA2391BE43FA6005E05A1 /* GTMOAuth2ViewTouch.xib */; };
+		EDDBA23E1BE44000005E05A1 /* GTLGmail_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDBA23D1BE44000005E05A1 /* GTLGmail_Sources.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +36,34 @@
 			remoteGlobalIDString = EDDBA1F31BE437F6005E05A1;
 			remoteInfo = recontrer;
 		};
+		EDDBA22C1BE43ED9005E05A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDDBA2251BE43ED9005E05A1 /* GTL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4F38F6A60B66E91D00B24B81;
+			remoteInfo = GTLFramework;
+		};
+		EDDBA22E1BE43ED9005E05A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDDBA2251BE43ED9005E05A1 /* GTL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4F12027C11A4CA2F00BEB470;
+			remoteInfo = GTLTouchStaticLib;
+		};
+		EDDBA2301BE43ED9005E05A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDDBA2251BE43ED9005E05A1 /* GTL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4F12027D11A4CA2F00BEB470;
+			remoteInfo = GTLUnitTests;
+		};
+		EDDBA2321BE43ED9005E05A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDDBA2251BE43ED9005E05A1 /* GTL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4F1AD9020B71603F00DC0485;
+			remoteInfo = DevelopmentTestTool;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +80,13 @@
 		EDDBA2131BE437F7005E05A1 /* recontrerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = recontrerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDBA2171BE437F7005E05A1 /* recontrerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recontrerUITests.swift; sourceTree = "<group>"; };
 		EDDBA2191BE437F7005E05A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDDBA2251BE43ED9005E05A1 /* GTL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GTL.xcodeproj; path = "google-api-objectivec-client/Source/GTL.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		EDDBA2351BE43F02005E05A1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		EDDBA2361BE43F02005E05A1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EDDBA2391BE43FA6005E05A1 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GTMOAuth2ViewTouch.xib; path = "google-api-objectivec-client/Source/OAuth2/Touch/GTMOAuth2ViewTouch.xib"; sourceTree = SOURCE_ROOT; };
+		EDDBA23B1BE43FDF005E05A1 /* GTLGmail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GTLGmail.h; path = "google-api-objectivec-client/Source/Services/Gmail/Generated/GTLGmail.h"; sourceTree = SOURCE_ROOT; };
+		EDDBA23C1BE44000005E05A1 /* recontrer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "recontrer-Bridging-Header.h"; sourceTree = "<group>"; };
+		EDDBA23D1BE44000005E05A1 /* GTLGmail_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLGmail_Sources.m; path = "google-api-objectivec-client/Source/Services/Gmail/Generated/GTLGmail_Sources.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +94,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDDBA2371BE43F02005E05A1 /* Security.framework in Frameworks */,
+				EDDBA2381BE43F02005E05A1 /* SystemConfiguration.framework in Frameworks */,
+				EDDBA2341BE43F02005E05A1 /* libGTLTouchStaticLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +120,8 @@
 		EDDBA1EB1BE437F6005E05A1 = {
 			isa = PBXGroup;
 			children = (
+				EDDBA2351BE43F02005E05A1 /* Security.framework */,
+				EDDBA2361BE43F02005E05A1 /* SystemConfiguration.framework */,
 				EDDBA1F61BE437F6005E05A1 /* recontrer */,
 				EDDBA20B1BE437F7005E05A1 /* recontrerTests */,
 				EDDBA2161BE437F7005E05A1 /* recontrerUITests */,
@@ -103,6 +148,11 @@
 				EDDBA1FE1BE437F7005E05A1 /* Assets.xcassets */,
 				EDDBA2001BE437F7005E05A1 /* LaunchScreen.storyboard */,
 				EDDBA2031BE437F7005E05A1 /* Info.plist */,
+				EDDBA2391BE43FA6005E05A1 /* GTMOAuth2ViewTouch.xib */,
+				EDDBA23B1BE43FDF005E05A1 /* GTLGmail.h */,
+				EDDBA23D1BE44000005E05A1 /* GTLGmail_Sources.m */,
+				EDDBA2251BE43ED9005E05A1 /* GTL.xcodeproj */,
+				EDDBA23C1BE44000005E05A1 /* recontrer-Bridging-Header.h */,
 			);
 			path = recontrer;
 			sourceTree = "<group>";
@@ -123,6 +173,17 @@
 				EDDBA2191BE437F7005E05A1 /* Info.plist */,
 			);
 			path = recontrerUITests;
+			sourceTree = "<group>";
+		};
+		EDDBA2261BE43ED9005E05A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDDBA22D1BE43ED9005E05A1 /* GTL.framework */,
+				EDDBA22F1BE43ED9005E05A1 /* libGTLTouchStaticLib.a */,
+				EDDBA2311BE43ED9005E05A1 /* GTLUnitTests.xctest */,
+				EDDBA2331BE43ED9005E05A1 /* DevelopmentTestTool */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +276,12 @@
 			mainGroup = EDDBA1EB1BE437F6005E05A1;
 			productRefGroup = EDDBA1F51BE437F6005E05A1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EDDBA2261BE43ED9005E05A1 /* Products */;
+					ProjectRef = EDDBA2251BE43ED9005E05A1 /* GTL.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EDDBA1F31BE437F6005E05A1 /* recontrer */,
@@ -224,11 +291,43 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		EDDBA22D1BE43ED9005E05A1 /* GTL.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GTL.framework;
+			remoteRef = EDDBA22C1BE43ED9005E05A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EDDBA22F1BE43ED9005E05A1 /* libGTLTouchStaticLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGTLTouchStaticLib.a;
+			remoteRef = EDDBA22E1BE43ED9005E05A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EDDBA2311BE43ED9005E05A1 /* GTLUnitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GTLUnitTests.xctest;
+			remoteRef = EDDBA2301BE43ED9005E05A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EDDBA2331BE43ED9005E05A1 /* DevelopmentTestTool */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = DevelopmentTestTool;
+			remoteRef = EDDBA2321BE43ED9005E05A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		EDDBA1F21BE437F6005E05A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDDBA23A1BE43FA6005E05A1 /* GTMOAuth2ViewTouch.xib in Resources */,
 				EDDBA2021BE437F7005E05A1 /* LaunchScreen.storyboard in Resources */,
 				EDDBA1FF1BE437F7005E05A1 /* Assets.xcassets in Resources */,
 				EDDBA1FD1BE437F7005E05A1 /* Main.storyboard in Resources */,
@@ -256,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDDBA23E1BE44000005E05A1 /* GTLGmail_Sources.m in Sources */,
 				EDDBA1FA1BE437F7005E05A1 /* ViewController.swift in Sources */,
 				EDDBA1F81BE437F7005E05A1 /* AppDelegate.swift in Sources */,
 			);
@@ -397,10 +497,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = recontrer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.recontrer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "recontrer/recontrer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "/Users/Ivan2/Documents/recontrer/google-api-objectivec-client/Source/**";
 			};
 			name = Debug;
 		};
@@ -408,10 +517,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = recontrer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.recontrer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "recontrer/recontrer-Bridging-Header.h";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "/Users/Ivan2/Documents/recontrer/google-api-objectivec-client/Source/**";
 			};
 			name = Release;
 		};
