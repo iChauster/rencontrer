@@ -1,15 +1,16 @@
 //
-//  ViewController.swift
+//  CalendarControllerViewController.swift
 //  recontrer
 //
-//  Created by Ivan Chau on 10/30/15.
+//  Created by Ivan Chau on 11/4/15.
 //  Copyright © 2015 Ivan Chau. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class CalendarControllerViewController: UIViewController {
+    @IBOutlet weak var meetings : UILabel?
+   
     private let kKeychainItemName = "recontrer: Gmail API"
     private let kClientID = "637818622405-uddaldcou24vuk3jgsngna1fhs2vapmj.apps.googleusercontent.com"
     private let kClientSecret = "rzdqWU46tNGuNk91Tc70SKln"
@@ -17,25 +18,20 @@ class ViewController: UIViewController {
     private let scopes = [kGTLAuthScopeGmailReadonly]
     
     private let service = GTLServiceGmail()
-    let output = UITextView()
-    
+    var messagesCount = 0
+    var doneCount = 0
+    var messagesArray = NSMutableArray()
     // When the view loads, create necessary subviews
     // and initialize the Gmail API service
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        output.frame = view.bounds
-        output.editable = false
-        output.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
-        output.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]        
-        view.addSubview(output);
         
         self.service.authorizer = GTMOAuth2ViewControllerTouch.authForGoogleFromKeychainForName(
             kKeychainItemName,
             clientID: kClientID,
             clientSecret: kClientSecret
         )
-      
+        
     }
     
     // When the view appears, ensure that the Gmail API service is authorized
@@ -43,7 +39,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         if let authorizer = service.authorizer,
             canAuth = authorizer.canAuthorize where canAuth {
-                fetchLabels()
+                fetchMessages()
         } else {
             presentViewController(
                 createAuthController(),
@@ -55,14 +51,7 @@ class ViewController: UIViewController {
     
     
     // Construct a query and get a list of upcoming labels from the gmail API
-    func fetchLabels() {
-        output.text = "Getting labels..."
-        
-        let query = GTLQueryGmail.queryForUsersLabelsList()
-        service.executeQuery(query,
-            delegate: self,
-            didFinishSelector: "displayResultWithTicket:finishedWithObject:error:"
-        )
+    func fetchMessages() {
         let em = GTLQueryGmail.queryForUsersMessagesList()
         service.executeQuery(em,
             delegate: self,
@@ -70,30 +59,6 @@ class ViewController: UIViewController {
         
     }
     
-    // Display the labels in the UITextView
-    func displayResultWithTicket(ticket : GTLServiceTicket,
-        finishedWithObject labelsResponse : GTLGmailListLabelsResponse,
-        error : NSError?) {
-            
-            if let error = error {
-                showAlert("Error", message: error.localizedDescription)
-                return
-            }
-            
-            var labelString = ""
-            
-            if !labelsResponse.labels.isEmpty {
-                labelString += "Labels:\n"
-                for label in labelsResponse.labels as! [GTLGmailLabel] {
-                    labelString += "\(label.name)\n"
-                }
-            } else {
-                labelString = "No labels found."
-            }
-            
-            output.text = labelString
-            
-    }
     func logResultWithTicket(ticket : GTLServiceTicket,
         finishedWithObject messResponse : GTLGmailListMessagesResponse,
         error : NSError?) {
@@ -102,12 +67,13 @@ class ViewController: UIViewController {
             }
             if !messResponse.messages.isEmpty {
                 for message in messResponse.messages as! [GTLGmailMessage]{
+                    messagesCount = messResponse.messages.count
                     let identity = message.identifier
                     let search = GTLQueryGmail.queryForUsersMessagesGet()
                     search.identifier = identity
                     service.executeQuery(search,
                         delegate: self,
-                    didFinishSelector: "parseWithTicket:finishedWithObject:error:")
+                        didFinishSelector: "parseWithTicket:finishedWithObject:error:")
                 }
             }else{
                 NSLog("Bad")
@@ -123,9 +89,10 @@ class ViewController: UIViewController {
     }
     
     func parseMailInfo(mailInfo : GTLGmailMessage){
-        var labelId = mailInfo.labelIds[0] as! String
+        doneCount++
+        let labelId = mailInfo.labelIds[0] as! String
         if labelId == "INBOX" {
-            var mailInformationDict = NSMutableDictionary()
+            let mailInformationDict = NSMutableDictionary()
             mailInformationDict.setValue(mailInfo.snippet as String, forKey: "snippet")
             mailInformationDict.setValue(mailInfo.identifier as String, forKey: "gmailId")
             mailInformationDict.setValue(mailInfo.internalDate, forKey: "internaldate")
@@ -133,14 +100,14 @@ class ViewController: UIViewController {
             let payloadArray = mailInfo.payload.headers as NSArray
             
             for obj in payloadArray {
-                var payloadObj = obj as! GTLGmailMessagePartHeader
+                let payloadObj = obj as! GTLGmailMessagePartHeader
                 if payloadObj.name == "Subject" {
                     mailInformationDict.setValue(payloadObj.value, forKey: "subject")
                 }
                 
                 if payloadObj.name == "From" {
-                    var fromStr = payloadObj.value
-                    var index2 = fromStr.rangeOfString("<", options: .BackwardsSearch)?.startIndex
+                    let fromStr = payloadObj.value
+                    let index2 = fromStr.rangeOfString("<", options: .BackwardsSearch)?.startIndex
                     var substring2 = ""
                     if index2 != nil {
                         substring2 = fromStr.substringToIndex(index2!)
@@ -152,8 +119,8 @@ class ViewController: UIViewController {
                 }
                 
                 if payloadObj.name == "To" {
-                    var fromStr = payloadObj.value
-                    var index2 = fromStr.rangeOfString("<", options: .BackwardsSearch)?.startIndex
+                    let fromStr = payloadObj.value
+                    let index2 = fromStr.rangeOfString("<", options: .BackwardsSearch)?.startIndex
                     var substringTo = ""
                     if index2 != nil {
                         substringTo = fromStr.substringToIndex(index2!)
@@ -175,19 +142,24 @@ class ViewController: UIViewController {
                     
                     let decodedData = NSData(base64EncodedString: base64DataString, options:NSDataBase64DecodingOptions(rawValue: 0))
                     decodedBody = NSString(data: decodedData!, encoding: NSUTF8StringEncoding)
-                    NSLog((decodedBody as? String)!)
+                    mailInformationDict.setValue(decodedBody, forKey: "body")
                 }
                 
             }
+            messagesArray.addObject(mailInformationDict)
+            NSLog(doneCount.description)
         }
-        //Create counter for know when finish
+        if messagesCount == doneCount{
+            doneCount = 0
+            NSLog(messagesArray.description)
+        }
         
-    
-
+        
+        
     }
     // Creates the auth controller for authorizing access to Gmail API
     private func createAuthController() -> GTMOAuth2ViewControllerTouch {
-       //let scopeString = " ".join(scopes)
+        //let scopeString = " ".join(scopes)
         let scopeString = scopes.joinWithSeparator(" ")
         return GTMOAuth2ViewControllerTouch(
             scope: scopeString,
@@ -231,3 +203,4 @@ class ViewController: UIViewController {
     }
     
 }
+

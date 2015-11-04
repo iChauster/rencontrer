@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EDDBA1F81BE437F7005E05A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDBA1F71BE437F7005E05A1 /* AppDelegate.swift */; };
-		EDDBA1FA1BE437F7005E05A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDBA1F91BE437F7005E05A1 /* ViewController.swift */; };
 		EDDBA1FD1BE437F7005E05A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDBA1FB1BE437F7005E05A1 /* Main.storyboard */; };
 		EDDBA1FF1BE437F7005E05A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDBA1FE1BE437F7005E05A1 /* Assets.xcassets */; };
 		EDDBA2021BE437F7005E05A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDBA2001BE437F7005E05A1 /* LaunchScreen.storyboard */; };
@@ -19,6 +18,7 @@
 		EDDBA2381BE43F02005E05A1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDBA2361BE43F02005E05A1 /* SystemConfiguration.framework */; };
 		EDDBA23A1BE43FA6005E05A1 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDBA2391BE43FA6005E05A1 /* GTMOAuth2ViewTouch.xib */; };
 		EDDBA23E1BE44000005E05A1 /* GTLGmail_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDBA23D1BE44000005E05A1 /* GTLGmail_Sources.m */; };
+		EDDBA2401BEAA7DD005E05A1 /* CalendarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDBA23F1BEAA7DD005E05A1 /* CalendarControllerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +69,6 @@
 /* Begin PBXFileReference section */
 		EDDBA1F41BE437F6005E05A1 /* recontrer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = recontrer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDBA1F71BE437F7005E05A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EDDBA1F91BE437F7005E05A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EDDBA1FC1BE437F7005E05A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDDBA1FE1BE437F7005E05A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDDBA2011BE437F7005E05A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 		EDDBA23B1BE43FDF005E05A1 /* GTLGmail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GTLGmail.h; path = "google-api-objectivec-client/Source/Services/Gmail/Generated/GTLGmail.h"; sourceTree = SOURCE_ROOT; };
 		EDDBA23C1BE44000005E05A1 /* recontrer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "recontrer-Bridging-Header.h"; sourceTree = "<group>"; };
 		EDDBA23D1BE44000005E05A1 /* GTLGmail_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLGmail_Sources.m; path = "google-api-objectivec-client/Source/Services/Gmail/Generated/GTLGmail_Sources.m"; sourceTree = SOURCE_ROOT; };
+		EDDBA23F1BEAA7DD005E05A1 /* CalendarControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarControllerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				EDDBA1F71BE437F7005E05A1 /* AppDelegate.swift */,
-				EDDBA1F91BE437F7005E05A1 /* ViewController.swift */,
+				EDDBA23F1BEAA7DD005E05A1 /* CalendarControllerViewController.swift */,
 				EDDBA1FB1BE437F7005E05A1 /* Main.storyboard */,
 				EDDBA1FE1BE437F7005E05A1 /* Assets.xcassets */,
 				EDDBA2001BE437F7005E05A1 /* LaunchScreen.storyboard */,
@@ -356,7 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDDBA23E1BE44000005E05A1 /* GTLGmail_Sources.m in Sources */,
-				EDDBA1FA1BE437F7005E05A1 /* ViewController.swift in Sources */,
+				EDDBA2401BEAA7DD005E05A1 /* CalendarControllerViewController.swift in Sources */,
 				EDDBA1F81BE437F7005E05A1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
