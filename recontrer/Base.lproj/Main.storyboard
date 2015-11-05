@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="KQ8-71-V1h"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gFK-7Y-10b">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="708-fB-6SS">
@@ -57,25 +56,20 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tF7-8g-LSm" customClass="CVCalendarView" customModule="CVCalendar">
-                                <rect key="frame" x="0.0" y="241" width="600" height="286"/>
+                                <rect key="frame" x="0.0" y="241" width="600" height="255"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="286" id="Xux-sg-lkw"/>
+                                    <constraint firstAttribute="height" constant="255" id="Xux-sg-lkw"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="calendarDelegate" destination="nqM-gY-JDt" id="TuX-D3-72m"/>
                                 </connections>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JT2-Z9-4YD">
-                                <rect key="frame" x="0.0" y="535" width="600" height="465"/>
+                                <rect key="frame" x="0.0" y="504" width="600" height="96"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="465" id="L8q-pC-HLD"/>
-                                    <constraint firstAttribute="width" secondItem="JT2-Z9-4YD" secondAttribute="height" multiplier="200:119" constant="-181.51260504201684" id="T91-a7-9oc"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="357" id="fbd-GC-nvl"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeetCell" rowHeight="106" id="7Ht-F8-lPf" customClass="MeetingTableViewCell" customModule="recontrer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="106"/>
@@ -167,12 +161,11 @@
                             <constraint firstItem="tF7-8g-LSm" firstAttribute="leading" secondItem="gFK-7Y-10b" secondAttribute="leadingMargin" constant="-20" id="WHC-m9-ims"/>
                             <constraint firstItem="Mnp-gp-J95" firstAttribute="top" secondItem="708-fB-6SS" secondAttribute="bottom" constant="-2" id="Wm0-uH-F2Y"/>
                             <constraint firstItem="KqQ-SA-jSL" firstAttribute="top" secondItem="Wgi-cx-uRr" secondAttribute="bottom" constant="70" id="YDe-qd-wl9"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="JT2-Z9-4YD" secondAttribute="bottom" id="cj6-XY-n5Y"/>
                             <constraint firstItem="708-fB-6SS" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="e6S-qY-bRy"/>
                             <constraint firstItem="tF7-8g-LSm" firstAttribute="top" secondItem="Mnp-gp-J95" secondAttribute="bottom" id="h4C-Vh-Zfq"/>
                         </constraints>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="1000"/>
                     <connections>
                         <outlet property="calendarMenuView" destination="Mnp-gp-J95" id="JIU-1K-Cyh"/>
                         <outlet property="calendarView" destination="tF7-8g-LSm" id="STC-SB-NdA"/>
