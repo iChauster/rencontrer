@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Foundation
 
-class CalendarControllerViewController: UIViewController {
+class CalendarControllerViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var meetings : UILabel?
+    @IBOutlet weak var tableView : UITableView!
    
     private let kKeychainItemName = "recontrer: Gmail API"
     private let kClientID = "637818622405-uddaldcou24vuk3jgsngna1fhs2vapmj.apps.googleusercontent.com"
@@ -25,7 +27,7 @@ class CalendarControllerViewController: UIViewController {
     // and initialize the Gmail API service
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tableView!.dataSource = self;
         self.service.authorizer = GTMOAuth2ViewControllerTouch.authForGoogleFromKeychainForName(
             kKeychainItemName,
             clientID: kClientID,
@@ -147,11 +149,10 @@ class CalendarControllerViewController: UIViewController {
                 
             }
             messagesArray.addObject(mailInformationDict)
-            NSLog(doneCount.description)
         }
         if messagesCount == doneCount{
             doneCount = 0
-            NSLog(messagesArray.description)
+            self.findMeetings(messagesArray)
         }
         
         
@@ -195,6 +196,38 @@ class CalendarControllerViewController: UIViewController {
             cancelButtonTitle: "OK"
         )
         alert.show()
+    }
+    func findMeetings(meetingsArray : NSMutableArray){
+        //algorithm
+        for message in meetingsArray{
+            let dictionary = NSMutableDictionary.init(dictionary: message as! NSMutableDictionary)
+            if dictionary.objectForKey("body") != nil {
+                let string = dictionary.objectForKey("body") as! String
+                if string.rangeOfString("tomorrow") != nil && string.rangeOfString("meeting") != nil{
+                    NSLog(string)
+                    let text = string
+                    let range: Range<String.Index> = text.rangeOfString("meeting")!
+                    let index: Int = text.startIndex.distanceTo(range.startIndex) //will call successor/predecessor several t
+                    NSLog(index.description)
+                    let int = index + 30
+                    let rtext = Range(start: text.startIndex.advancedBy(index - 20),
+                        end: text.startIndex.advancedBy(int))
+                    let snippString = text.substringWithRange(rtext)
+                    NSLog(snippString)
+                    
+                }
+            }
+        }
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell:MeetingTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("MeetCell") as! MeetingTableViewCell
+        cell.dateTime?.text = "Home : November 28, 2015"
+        cell.from?.text = "Myself"
+        cell.dateSent?.text = "11.27.15"
+        return cell
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
     override func didReceiveMemoryWarning() {
