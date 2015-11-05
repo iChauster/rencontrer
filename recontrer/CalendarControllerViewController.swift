@@ -58,11 +58,14 @@ class CalendarControllerViewController: UIViewController, UITableViewDataSource,
         
         self.calendarView!.commitCalendarViewUpdate()
         self.calendarMenuView!.commitMenuViewUpdate()
+        NSLog("viewLayedOut")
     }
     func presentationMode() -> CalendarMode{
-        return .MonthView
+        NSLog("Presentation Set")
+        return .WeekView
     }
     func firstWeekday() -> Weekday{
+        NSLog("WeekDay Set")
         return .Sunday
     }
     

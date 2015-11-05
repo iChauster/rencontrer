@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="708-fB-6SS">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="227"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="195"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meetings Today :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iP2-gd-gle">
                                         <rect key="frame" x="205" y="29" width="190" height="31"/>
@@ -34,7 +34,7 @@
                                 <constraints>
                                     <constraint firstItem="iP2-gd-gle" firstAttribute="centerX" secondItem="708-fB-6SS" secondAttribute="centerX" id="R3P-uk-fZj"/>
                                     <constraint firstItem="iP2-gd-gle" firstAttribute="top" secondItem="708-fB-6SS" secondAttribute="top" constant="29" id="eys-jj-k0G"/>
-                                    <constraint firstAttribute="height" constant="227" id="iGF-Zb-seh"/>
+                                    <constraint firstAttribute="height" constant="195" id="iGF-Zb-seh"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqQ-SA-jSL">
@@ -44,12 +44,34 @@
                                 <color key="textColor" name="selectedMenuItemTextColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JT2-Z9-4YD">
-                                <rect key="frame" x="0.0" y="665" width="600" height="335"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mnp-gp-J95" customClass="CVCalendarMenuView" customModule="CVCalendar">
+                                <rect key="frame" x="0.0" y="193" width="600" height="48"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.10491326644804402" green="0.17318582763483301" blue="0.27910657051282051" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="rtr-Z0-Zqy"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="menuViewDelegate" destination="nqM-gY-JDt" id="gfi-AI-Fby"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tF7-8g-LSm" customClass="CVCalendarView" customModule="CVCalendar">
+                                <rect key="frame" x="0.0" y="241" width="600" height="394"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="335" id="c7s-ng-mEc"/>
+                                    <constraint firstAttribute="width" constant="600" id="7bg-Na-WRN"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="calendarDelegate" destination="nqM-gY-JDt" id="TuX-D3-72m"/>
+                                </connections>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JT2-Z9-4YD">
+                                <rect key="frame" x="0.0" y="643" width="600" height="357"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="357" id="c7s-ng-mEc"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeetCell" rowHeight="106" id="7Ht-F8-lPf" customClass="MeetingTableViewCell" customModule="recontrer" customModuleProvider="target">
@@ -126,28 +148,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mnp-gp-J95" customClass="CVCalendarMenuView" customModule="CVCalendar">
-                                <rect key="frame" x="0.0" y="227" width="600" height="48"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.10491326644804402" green="0.17318582763483301" blue="0.27910657051282051" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="rtr-Z0-Zqy"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="menuViewDelegate" destination="nqM-gY-JDt" id="gfi-AI-Fby"/>
-                                </connections>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tF7-8g-LSm" customClass="CVCalendarView" customModule="CVCalendar">
-                                <rect key="frame" x="0.0" y="274" width="600" height="394"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="7bg-Na-WRN"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="calendarDelegate" destination="nqM-gY-JDt" id="TuX-D3-72m"/>
-                                </connections>
-                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -155,18 +155,18 @@
                             <constraint firstItem="tF7-8g-LSm" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="3aV-dH-TZ7"/>
                             <constraint firstItem="JT2-Z9-4YD" firstAttribute="leading" secondItem="708-fB-6SS" secondAttribute="leading" id="7rv-Dn-Qii"/>
                             <constraint firstItem="Mnp-gp-J95" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="8kv-kT-Rod"/>
-                            <constraint firstItem="tF7-8g-LSm" firstAttribute="top" secondItem="708-fB-6SS" secondAttribute="bottom" constant="47" id="9F9-7c-p5Q"/>
+                            <constraint firstItem="tF7-8g-LSm" firstAttribute="top" secondItem="708-fB-6SS" secondAttribute="bottom" constant="46" id="9F9-7c-p5Q"/>
                             <constraint firstItem="708-fB-6SS" firstAttribute="leading" secondItem="gFK-7Y-10b" secondAttribute="leading" id="9pC-zN-jau"/>
                             <constraint firstItem="708-fB-6SS" firstAttribute="top" secondItem="gFK-7Y-10b" secondAttribute="topMargin" id="KGM-jw-z2y"/>
                             <constraint firstItem="KQ8-71-V1h" firstAttribute="top" secondItem="JT2-Z9-4YD" secondAttribute="bottom" id="Lec-9N-XOz"/>
-                            <constraint firstItem="tF7-8g-LSm" firstAttribute="top" secondItem="708-fB-6SS" secondAttribute="bottom" constant="47" id="OOW-Ek-Vf3"/>
+                            <constraint firstItem="tF7-8g-LSm" firstAttribute="top" secondItem="708-fB-6SS" secondAttribute="bottom" constant="46" id="OOW-Ek-Vf3"/>
                             <constraint firstItem="Mnp-gp-J95" firstAttribute="leading" secondItem="708-fB-6SS" secondAttribute="leading" id="P5C-WE-cWa"/>
                             <constraint firstItem="JT2-Z9-4YD" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="T5f-1W-Z4T"/>
-                            <constraint firstItem="Mnp-gp-J95" firstAttribute="top" secondItem="708-fB-6SS" secondAttribute="bottom" id="Wm0-uH-F2Y"/>
+                            <constraint firstItem="Mnp-gp-J95" firstAttribute="top" secondItem="708-fB-6SS" secondAttribute="bottom" constant="-2" id="Wm0-uH-F2Y"/>
                             <constraint firstItem="708-fB-6SS" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="e6S-qY-bRy"/>
                             <constraint firstItem="KqQ-SA-jSL" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="j58-pm-Sah"/>
                             <constraint firstItem="KqQ-SA-jSL" firstAttribute="top" secondItem="Wgi-cx-uRr" secondAttribute="bottom" constant="70" id="lqn-jf-RBc"/>
-                            <constraint firstItem="KQ8-71-V1h" firstAttribute="top" secondItem="tF7-8g-LSm" secondAttribute="bottom" constant="332" id="tWC-zj-b4v"/>
+                            <constraint firstItem="KQ8-71-V1h" firstAttribute="top" secondItem="tF7-8g-LSm" secondAttribute="bottom" constant="365" id="tWC-zj-b4v"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
