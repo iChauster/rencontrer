@@ -603,6 +603,7 @@
 				EDDBA21E1BE437F7005E05A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EDDBA21F1BE437F7005E05A1 /* Build configuration list for PBXNativeTarget "recontrerTests" */ = {
 			isa = XCConfigurationList;
@@ -611,6 +612,7 @@
 				EDDBA2211BE437F7005E05A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EDDBA2221BE437F7005E05A1 /* Build configuration list for PBXNativeTarget "recontrerUITests" */ = {
 			isa = XCConfigurationList;
@@ -619,6 +621,7 @@
 				EDDBA2241BE437F7005E05A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

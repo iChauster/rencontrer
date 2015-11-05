@@ -237,7 +237,7 @@ class CalendarControllerViewController: UIViewController, UITableViewDataSource 
         cell.dateSent?.text = "11.27.15" */
         cell.from?.text = deal.valueForKey("from") as? String
         cell.dateSent?.text = deal.valueForKey("date") as? String
-        cell.snippet?.text = deal.valueForKey("snippet") as? String
+        cell.snippet?.text = "..." + (deal.valueForKey("snippet") as? String)! + "..."
         
         return cell
     }
