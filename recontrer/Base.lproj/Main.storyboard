@@ -82,13 +82,24 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGI-4C-alS">
-                                                    <rect key="frame" x="526" y="8" width="66" height="21"/>
+                                                    <rect key="frame" x="475" y="8" width="117" height="21"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="66" id="9ND-g4-wex"/>
+                                                        <constraint firstAttribute="width" constant="117" id="9ND-g4-wex"/>
                                                         <constraint firstAttribute="height" constant="21" id="bgU-Mq-9Xz"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="inL-KK-lj1">
+                                                    <rect key="frame" x="358" y="32" width="234" height="65"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="65" id="Bfs-Qn-vRM"/>
+                                                        <constraint firstAttribute="width" constant="234" id="ltI-m2-Lft"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -99,6 +110,8 @@
                                                 <constraint firstItem="TGI-4C-alS" firstAttribute="trailing" secondItem="2ei-vr-qPR" secondAttribute="trailingMargin" id="NoG-Fu-Xxe"/>
                                                 <constraint firstItem="Del-Xq-sMp" firstAttribute="top" secondItem="ZGE-YU-ENs" secondAttribute="bottom" constant="3" id="Pey-B6-pv5"/>
                                                 <constraint firstItem="ZGE-YU-ENs" firstAttribute="top" secondItem="2ei-vr-qPR" secondAttribute="topMargin" id="Z1C-Bv-jyE"/>
+                                                <constraint firstItem="inL-KK-lj1" firstAttribute="top" secondItem="TGI-4C-alS" secondAttribute="bottom" constant="3" id="ltE-cr-BIU"/>
+                                                <constraint firstItem="inL-KK-lj1" firstAttribute="trailing" secondItem="2ei-vr-qPR" secondAttribute="trailingMargin" id="qwm-IA-Ekr"/>
                                                 <constraint firstItem="TGI-4C-alS" firstAttribute="top" secondItem="2ei-vr-qPR" secondAttribute="topMargin" id="tU4-ya-vXv"/>
                                                 <constraint firstItem="ZGE-YU-ENs" firstAttribute="leading" secondItem="2ei-vr-qPR" secondAttribute="leadingMargin" id="yhK-cy-v2p"/>
                                             </constraints>
@@ -108,6 +121,7 @@
                                             <outlet property="dateSent" destination="TGI-4C-alS" id="Tpf-Gf-zzn"/>
                                             <outlet property="dateTime" destination="Del-Xq-sMp" id="J6a-rh-UZp"/>
                                             <outlet property="from" destination="ZGE-YU-ENs" id="Mgn-FM-dwd"/>
+                                            <outlet property="snippet" destination="inL-KK-lj1" id="vFa-qs-dbP"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -119,10 +133,10 @@
                             <constraint firstItem="JT2-Z9-4YD" firstAttribute="leading" secondItem="708-fB-6SS" secondAttribute="leading" id="7rv-Dn-Qii"/>
                             <constraint firstItem="708-fB-6SS" firstAttribute="leading" secondItem="gFK-7Y-10b" secondAttribute="leading" id="9pC-zN-jau"/>
                             <constraint firstItem="708-fB-6SS" firstAttribute="top" secondItem="gFK-7Y-10b" secondAttribute="topMargin" id="KGM-jw-z2y"/>
+                            <constraint firstItem="KQ8-71-V1h" firstAttribute="top" secondItem="JT2-Z9-4YD" secondAttribute="bottom" id="Lec-9N-XOz"/>
                             <constraint firstItem="JT2-Z9-4YD" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="T5f-1W-Z4T"/>
                             <constraint firstItem="708-fB-6SS" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="e6S-qY-bRy"/>
                             <constraint firstItem="KqQ-SA-jSL" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="j58-pm-Sah"/>
-                            <constraint firstItem="JT2-Z9-4YD" firstAttribute="top" secondItem="KqQ-SA-jSL" secondAttribute="bottom" constant="57" id="kh3-7C-uns"/>
                             <constraint firstItem="KqQ-SA-jSL" firstAttribute="top" secondItem="Wgi-cx-uRr" secondAttribute="bottom" constant="70" id="lqn-jf-RBc"/>
                         </constraints>
                     </view>

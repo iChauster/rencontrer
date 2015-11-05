@@ -12,6 +12,7 @@ class MeetingTableViewCell: UITableViewCell {
     @IBOutlet weak var from : UILabel?
     @IBOutlet weak var dateTime : UILabel?
     @IBOutlet weak var dateSent : UILabel?
+    @IBOutlet weak var snippet : UILabel?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

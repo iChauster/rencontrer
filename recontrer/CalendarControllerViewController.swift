@@ -23,6 +23,7 @@ class CalendarControllerViewController: UIViewController, UITableViewDataSource 
     var messagesCount = 0
     var doneCount = 0
     var messagesArray = NSMutableArray()
+    var tableArray = NSMutableArray()
     // When the view loads, create necessary subviews
     // and initialize the Gmail API service
     override func viewDidLoad() {
@@ -204,6 +205,7 @@ class CalendarControllerViewController: UIViewController, UITableViewDataSource 
             if dictionary.objectForKey("body") != nil {
                 let string = dictionary.objectForKey("body") as! String
                 if string.rangeOfString("tomorrow") != nil && string.rangeOfString("meeting") != nil{
+                    let tame = NSMutableDictionary()
                     NSLog(string)
                     let text = string
                     let range: Range<String.Index> = text.rangeOfString("meeting")!
@@ -214,20 +216,33 @@ class CalendarControllerViewController: UIViewController, UITableViewDataSource 
                         end: text.startIndex.advancedBy(int))
                     let snippString = text.substringWithRange(rtext)
                     NSLog(snippString)
+                    let foo : NSTimeInterval = (dictionary.objectForKey("internaldate") as? Double)! / 1000
+                    let date = NSDate(timeIntervalSince1970: foo)
+                    NSLog(date.description)
+                    tame.setObject(snippString, forKey: "snippet")
+                    tame.setObject(dictionary.objectForKey("from")!, forKey:"from")
+                    tame.setObject(date.description, forKey: "date")
+                    self.tableArray.addObject(tame)
                     
                 }
             }
         }
+        self.tableView.reloadData()
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:MeetingTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("MeetCell") as! MeetingTableViewCell
-        cell.dateTime?.text = "Home : November 28, 2015"
+        let deal = tableArray[indexPath.row]
+        /*cell.dateTime?.text = "Home : November 28, 2015"
         cell.from?.text = "Myself"
-        cell.dateSent?.text = "11.27.15"
+        cell.dateSent?.text = "11.27.15" */
+        cell.from?.text = deal.valueForKey("from") as? String
+        cell.dateSent?.text = deal.valueForKey("date") as? String
+        cell.snippet?.text = deal.valueForKey("snippet") as? String
+        
         return cell
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return tableArray.count
     }
     
     override func didReceiveMemoryWarning() {
