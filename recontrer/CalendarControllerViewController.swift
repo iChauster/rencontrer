@@ -62,11 +62,14 @@ class CalendarControllerViewController: UIViewController, UITableViewDataSource,
     }
     func presentationMode() -> CalendarMode{
         NSLog("Presentation Set")
-        return .WeekView
+        return .MonthView
     }
     func firstWeekday() -> Weekday{
         NSLog("WeekDay Set")
         return .Sunday
+    }
+    func dayOfWeekTextColor() -> UIColor {
+        return UIColor.whiteColor()
     }
     
     // Construct a query and get a list of upcoming labels from the gmail API
@@ -222,19 +225,15 @@ class CalendarControllerViewController: UIViewController, UITableViewDataSource,
                 let string = dictionary.objectForKey("body") as! String
                 if string.rangeOfString("tomorrow") != nil && string.rangeOfString("meeting") != nil{
                     let tame = NSMutableDictionary()
-                    NSLog(string)
                     let text = string
                     let range: Range<String.Index> = text.rangeOfString("meeting")!
                     let index: Int = text.startIndex.distanceTo(range.startIndex) //will call successor/predecessor several t
-                    NSLog(index.description)
                     let int = index + 30
                     let rtext = Range(start: text.startIndex.advancedBy(index - 20),
                         end: text.startIndex.advancedBy(int))
                     let snippString = text.substringWithRange(rtext)
-                    NSLog(snippString)
                     let foo : NSTimeInterval = (dictionary.objectForKey("internaldate") as? Double)! / 1000
                     let date = NSDate(timeIntervalSince1970: foo)
-                    NSLog(date.description)
                     tame.setObject(snippString, forKey: "snippet")
                     tame.setObject(dictionary.objectForKey("from")!, forKey:"from")
                     tame.setObject(date.description, forKey: "date")

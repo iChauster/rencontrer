@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -56,22 +57,24 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tF7-8g-LSm" customClass="CVCalendarView" customModule="CVCalendar">
-                                <rect key="frame" x="0.0" y="241" width="600" height="394"/>
+                                <rect key="frame" x="0.0" y="241" width="600" height="286"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="7bg-Na-WRN"/>
+                                    <constraint firstAttribute="height" constant="286" id="Xux-sg-lkw"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="calendarDelegate" destination="nqM-gY-JDt" id="TuX-D3-72m"/>
                                 </connections>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JT2-Z9-4YD">
-                                <rect key="frame" x="0.0" y="643" width="600" height="357"/>
+                                <rect key="frame" x="0.0" y="535" width="600" height="465"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="357" id="c7s-ng-mEc"/>
+                                    <constraint firstAttribute="height" constant="465" id="L8q-pC-HLD"/>
+                                    <constraint firstAttribute="width" secondItem="JT2-Z9-4YD" secondAttribute="height" multiplier="200:119" constant="-181.51260504201684" id="T91-a7-9oc"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="357" id="fbd-GC-nvl"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeetCell" rowHeight="106" id="7Ht-F8-lPf" customClass="MeetingTableViewCell" customModule="recontrer" customModuleProvider="target">
@@ -152,21 +155,20 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tF7-8g-LSm" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="3aV-dH-TZ7"/>
-                            <constraint firstItem="JT2-Z9-4YD" firstAttribute="leading" secondItem="708-fB-6SS" secondAttribute="leading" id="7rv-Dn-Qii"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JT2-Z9-4YD" secondAttribute="trailing" constant="-20" id="3Hm-n2-RJB"/>
+                            <constraint firstItem="JT2-Z9-4YD" firstAttribute="leading" secondItem="gFK-7Y-10b" secondAttribute="leadingMargin" constant="-20" id="4UX-At-DBe"/>
+                            <constraint firstItem="KqQ-SA-jSL" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="7pg-Fp-uay"/>
                             <constraint firstItem="Mnp-gp-J95" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="8kv-kT-Rod"/>
-                            <constraint firstItem="tF7-8g-LSm" firstAttribute="top" secondItem="708-fB-6SS" secondAttribute="bottom" constant="46" id="9F9-7c-p5Q"/>
                             <constraint firstItem="708-fB-6SS" firstAttribute="leading" secondItem="gFK-7Y-10b" secondAttribute="leading" id="9pC-zN-jau"/>
+                            <constraint firstItem="JT2-Z9-4YD" firstAttribute="top" secondItem="tF7-8g-LSm" secondAttribute="bottom" constant="8" id="BZ2-4T-Q9i"/>
                             <constraint firstItem="708-fB-6SS" firstAttribute="top" secondItem="gFK-7Y-10b" secondAttribute="topMargin" id="KGM-jw-z2y"/>
-                            <constraint firstItem="KQ8-71-V1h" firstAttribute="top" secondItem="JT2-Z9-4YD" secondAttribute="bottom" id="Lec-9N-XOz"/>
-                            <constraint firstItem="tF7-8g-LSm" firstAttribute="top" secondItem="708-fB-6SS" secondAttribute="bottom" constant="46" id="OOW-Ek-Vf3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tF7-8g-LSm" secondAttribute="trailing" constant="-20" id="NSN-ta-K8d"/>
                             <constraint firstItem="Mnp-gp-J95" firstAttribute="leading" secondItem="708-fB-6SS" secondAttribute="leading" id="P5C-WE-cWa"/>
-                            <constraint firstItem="JT2-Z9-4YD" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="T5f-1W-Z4T"/>
+                            <constraint firstItem="tF7-8g-LSm" firstAttribute="leading" secondItem="gFK-7Y-10b" secondAttribute="leadingMargin" constant="-20" id="WHC-m9-ims"/>
                             <constraint firstItem="Mnp-gp-J95" firstAttribute="top" secondItem="708-fB-6SS" secondAttribute="bottom" constant="-2" id="Wm0-uH-F2Y"/>
+                            <constraint firstItem="KqQ-SA-jSL" firstAttribute="top" secondItem="Wgi-cx-uRr" secondAttribute="bottom" constant="70" id="YDe-qd-wl9"/>
                             <constraint firstItem="708-fB-6SS" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="e6S-qY-bRy"/>
-                            <constraint firstItem="KqQ-SA-jSL" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="j58-pm-Sah"/>
-                            <constraint firstItem="KqQ-SA-jSL" firstAttribute="top" secondItem="Wgi-cx-uRr" secondAttribute="bottom" constant="70" id="lqn-jf-RBc"/>
-                            <constraint firstItem="KQ8-71-V1h" firstAttribute="top" secondItem="tF7-8g-LSm" secondAttribute="bottom" constant="365" id="tWC-zj-b4v"/>
+                            <constraint firstItem="tF7-8g-LSm" firstAttribute="top" secondItem="Mnp-gp-J95" secondAttribute="bottom" id="h4C-Vh-Zfq"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
