@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED0D5AFF1BEAFB81007D3872 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = ED0D5AFE1BEAFB81007D3872 /* Podfile */; };
 		EDDBA1F81BE437F7005E05A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDBA1F71BE437F7005E05A1 /* AppDelegate.swift */; };
 		EDDBA1FD1BE437F7005E05A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDBA1FB1BE437F7005E05A1 /* Main.storyboard */; };
 		EDDBA1FF1BE437F7005E05A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDBA1FE1BE437F7005E05A1 /* Assets.xcassets */; };
@@ -68,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED0D5AFE1BEAFB81007D3872 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		EDDBA1F41BE437F6005E05A1 /* recontrer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = recontrer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDBA1F71BE437F7005E05A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDDBA1FC1BE437F7005E05A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				EDDBA2031BE437F7005E05A1 /* Info.plist */,
 				EDDBA2391BE43FA6005E05A1 /* GTMOAuth2ViewTouch.xib */,
 				EDDBA23B1BE43FDF005E05A1 /* GTLGmail.h */,
+				ED0D5AFE1BEAFB81007D3872 /* Podfile */,
 				EDDBA23D1BE44000005E05A1 /* GTLGmail_Sources.m */,
 				EDDBA2251BE43ED9005E05A1 /* GTL.xcodeproj */,
 				EDDBA23C1BE44000005E05A1 /* recontrer-Bridging-Header.h */,
@@ -330,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED0D5AFF1BEAFB81007D3872 /* Podfile in Resources */,
 				EDDBA23A1BE43FA6005E05A1 /* GTMOAuth2ViewTouch.xib in Resources */,
 				EDDBA2021BE437F7005E05A1 /* LaunchScreen.storyboard in Resources */,
 				EDDBA1FF1BE437F7005E05A1 /* Assets.xcassets in Resources */,
