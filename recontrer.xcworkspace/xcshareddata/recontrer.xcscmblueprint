@@ -1,0 +1,52 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "599A8A0883842D7C72F45543B14F519AB1803A4E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "22754eea-fc93-e339-b032-c1f495b90c16++2896" : {
+
+    },
+    "052f66bb-8366-e9ed-b056-95094e25c79e++505" : {
+
+    },
+    "b3aa69f0-f65c-a609-0a27-78855af037c1++2896" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "052f66bb-8366-e9ed-b056-95094e25c79e++505" : 0,
+    "b3aa69f0-f65c-a609-0a27-78855af037c1++2896" : 0,
+    "599A8A0883842D7C72F45543B14F519AB1803A4E" : 0,
+    "22754eea-fc93-e339-b032-c1f495b90c16++2896" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FE785462-93CB-4905-B047-15B96E1CEB08",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "052f66bb-8366-e9ed-b056-95094e25c79e++505" : "recontrer\/google-api-objectivec-client\/",
+    "b3aa69f0-f65c-a609-0a27-78855af037c1++2896" : "recontrer\/google-api-objectivec-client\/Source\/HTTPFetcher\/",
+    "599A8A0883842D7C72F45543B14F519AB1803A4E" : "recontrer\/",
+    "22754eea-fc93-e339-b032-c1f495b90c16++2896" : "recontrer\/google-api-objectivec-client\/Source\/OAuth2\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "recontrer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "recontrer.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/google-api-objectivec-client.googlecode.com\/svn",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "052f66bb-8366-e9ed-b056-95094e25c79e++505"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/gtm-oauth2.googlecode.com\/svn",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "22754eea-fc93-e339-b032-c1f495b90c16++2896"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iChauster\/rencontrer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "599A8A0883842D7C72F45543B14F519AB1803A4E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/gtm-http-fetcher.googlecode.com\/svn",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "b3aa69f0-f65c-a609-0a27-78855af037c1++2896"
+    }
+  ]
+}

@@ -8,10 +8,12 @@
 
 import UIKit
 import Foundation
-
-class CalendarControllerViewController: UIViewController, UITableViewDataSource {
+import CVCalendar
+class CalendarControllerViewController: UIViewController, UITableViewDataSource, CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
     @IBOutlet weak var meetings : UILabel?
     @IBOutlet weak var tableView : UITableView!
+    @IBOutlet weak var calendarView : CVCalendarView!
+    @IBOutlet weak var calendarMenuView : CVCalendarMenuView!
    
     private let kKeychainItemName = "recontrer: Gmail API"
     private let kClientID = "637818622405-uddaldcou24vuk3jgsngna1fhs2vapmj.apps.googleusercontent.com"
@@ -51,7 +53,18 @@ class CalendarControllerViewController: UIViewController, UITableViewDataSource 
             )
         }
     }
-    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        self.calendarView!.commitCalendarViewUpdate()
+        self.calendarMenuView!.commitMenuViewUpdate()
+    }
+    func presentationMode() -> CalendarMode{
+        return .MonthView
+    }
+    func firstWeekday() -> Weekday{
+        return .Sunday
+    }
     
     // Construct a query and get a list of upcoming labels from the gmail API
     func fetchMessages() {

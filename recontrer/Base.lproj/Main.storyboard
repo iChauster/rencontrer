@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Calendar Controller View Controller-->
+        <!--Calendar Delegate-->
         <scene sceneID="hrU-Rp-0zI">
             <objects>
                 <viewController id="nqM-gY-JDt" customClass="CalendarControllerViewController" customModule="recontrer" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="KQ8-71-V1h"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gFK-7Y-10b">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="708-fB-6SS">
@@ -45,11 +45,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JT2-Z9-4YD">
-                                <rect key="frame" x="0.0" y="228" width="600" height="372"/>
+                                <rect key="frame" x="0.0" y="665" width="600" height="335"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="372" id="c7s-ng-mEc"/>
+                                    <constraint firstAttribute="height" constant="335" id="c7s-ng-mEc"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeetCell" rowHeight="106" id="7Ht-F8-lPf" customClass="MeetingTableViewCell" customModule="recontrer" customModuleProvider="target">
@@ -126,21 +126,54 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mnp-gp-J95" customClass="CVCalendarMenuView" customModule="CVCalendar">
+                                <rect key="frame" x="0.0" y="227" width="600" height="48"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.10491326644804402" green="0.17318582763483301" blue="0.27910657051282051" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="rtr-Z0-Zqy"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="menuViewDelegate" destination="nqM-gY-JDt" id="gfi-AI-Fby"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tF7-8g-LSm" customClass="CVCalendarView" customModule="CVCalendar">
+                                <rect key="frame" x="0.0" y="274" width="600" height="394"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="7bg-Na-WRN"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="calendarDelegate" destination="nqM-gY-JDt" id="TuX-D3-72m"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="tF7-8g-LSm" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="3aV-dH-TZ7"/>
                             <constraint firstItem="JT2-Z9-4YD" firstAttribute="leading" secondItem="708-fB-6SS" secondAttribute="leading" id="7rv-Dn-Qii"/>
+                            <constraint firstItem="Mnp-gp-J95" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="8kv-kT-Rod"/>
+                            <constraint firstItem="tF7-8g-LSm" firstAttribute="top" secondItem="708-fB-6SS" secondAttribute="bottom" constant="47" id="9F9-7c-p5Q"/>
                             <constraint firstItem="708-fB-6SS" firstAttribute="leading" secondItem="gFK-7Y-10b" secondAttribute="leading" id="9pC-zN-jau"/>
                             <constraint firstItem="708-fB-6SS" firstAttribute="top" secondItem="gFK-7Y-10b" secondAttribute="topMargin" id="KGM-jw-z2y"/>
                             <constraint firstItem="KQ8-71-V1h" firstAttribute="top" secondItem="JT2-Z9-4YD" secondAttribute="bottom" id="Lec-9N-XOz"/>
+                            <constraint firstItem="tF7-8g-LSm" firstAttribute="top" secondItem="708-fB-6SS" secondAttribute="bottom" constant="47" id="OOW-Ek-Vf3"/>
+                            <constraint firstItem="Mnp-gp-J95" firstAttribute="leading" secondItem="708-fB-6SS" secondAttribute="leading" id="P5C-WE-cWa"/>
                             <constraint firstItem="JT2-Z9-4YD" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="T5f-1W-Z4T"/>
+                            <constraint firstItem="Mnp-gp-J95" firstAttribute="top" secondItem="708-fB-6SS" secondAttribute="bottom" id="Wm0-uH-F2Y"/>
                             <constraint firstItem="708-fB-6SS" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="e6S-qY-bRy"/>
                             <constraint firstItem="KqQ-SA-jSL" firstAttribute="centerX" secondItem="gFK-7Y-10b" secondAttribute="centerX" id="j58-pm-Sah"/>
                             <constraint firstItem="KqQ-SA-jSL" firstAttribute="top" secondItem="Wgi-cx-uRr" secondAttribute="bottom" constant="70" id="lqn-jf-RBc"/>
+                            <constraint firstItem="KQ8-71-V1h" firstAttribute="top" secondItem="tF7-8g-LSm" secondAttribute="bottom" constant="332" id="tWC-zj-b4v"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="1000"/>
                     <connections>
+                        <outlet property="calendarMenuView" destination="Mnp-gp-J95" id="JIU-1K-Cyh"/>
+                        <outlet property="calendarView" destination="tF7-8g-LSm" id="STC-SB-NdA"/>
                         <outlet property="meetings" destination="KqQ-SA-jSL" id="cj9-DX-0ik"/>
                         <outlet property="tableView" destination="JT2-Z9-4YD" id="Dc2-bE-57m"/>
                     </connections>
