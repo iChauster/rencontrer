@@ -8,7 +8,7 @@
 
 import XCTest
 
-class recontrerUITests: XCTestCase {
+class rencontrerUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
