@@ -18,7 +18,7 @@ class CalendarControllerViewController: UIViewController, UITableViewDataSource,
     @IBOutlet weak var calendarMenuView : CVCalendarMenuView!
    
     //Gmail initialization.
-    private let kKeychainItemName = "recontrer: Gmail API"
+    private let kKeychainItemName = "rencontrer: Gmail API"
     private let kClientID = "637818622405-uddaldcou24vuk3jgsngna1fhs2vapmj.apps.googleusercontent.com"
     private let kClientSecret = "rzdqWU46tNGuNk91Tc70SKln"
     
