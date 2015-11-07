@@ -9,7 +9,7 @@
         <!--Calendar Delegate-->
         <scene sceneID="hrU-Rp-0zI">
             <objects>
-                <viewController id="nqM-gY-JDt" customClass="CalendarControllerViewController" customModule="recontrer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nqM-gY-JDt" customClass="CalendarControllerViewController" customModule="rencontrer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wgi-cx-uRr"/>
                         <viewControllerLayoutGuide type="bottom" id="KQ8-71-V1h"/>
