@@ -1,13 +1,13 @@
 //
-//  recontrerTests.swift
-//  recontrerTests
+//  rencontrerTests.swift
+//  rencontrerTests
 //
 //  Created by Ivan Chau on 10/30/15.
 //  Copyright © 2015 Ivan Chau. All rights reserved.
 //
 
 import XCTest
-@testable import recontrer
+@testable import rencontrer
 
 class recontrerTests: XCTestCase {
     
