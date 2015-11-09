@@ -241,17 +241,13 @@ class CalendarControllerViewController: UIViewController, UITableViewDataSource,
         )
         alert.show()
     }
-    func findMeetings(meetingsArray : NSMutableArray)
-    {
+    func findMeetings(meetingsArray : NSMutableArray) {
         //algorithm
-        for message in meetingsArray
-        {
+        for message in meetingsArray {
             let dictionary = NSMutableDictionary.init(dictionary: message as! NSMutableDictionary)
-            if dictionary.objectForKey("body") != nil 
-            {
+            if dictionary.objectForKey("body") != nil {
                 let string = dictionary.objectForKey("body") as! String
-                if string.rangeOfString("tomorrow") != nil && string.rangeOfString("meeting") != nil
-                {
+                if string.rangeOfString("tomorrow") != nil && string.rangeOfString("meeting") != nil || string.rangeOfString("appointment") != nil {
                     let tame = NSMutableDictionary()
                     let text = string
                     let range: Range<String.Index> = text.rangeOfString("meeting")!
@@ -270,34 +266,10 @@ class CalendarControllerViewController: UIViewController, UITableViewDataSource,
                 }
             }
         }
-        self.tableView.reloadData()
         //this will allow the tableView to now take the data we just got and put it into cells.
-        //second algorithm
-        for meeting in meetingsArray
-        {
-            let dictionary = NSMutableDictionary.init(dictionary: message as! NSMutableDictionary)
-            if dictionary.objectForKey("body") != nil
-            {
-                let string = dictionary.objectForKey("body") as! String
-                if string.rangeOfString("tomorrow") != nil && string.rangeOfString("appointment") != nil
-                {
-                    let tame = NSMutableDictionary()
-                    let text = string
-                    let range: Range<String.Index> = text.rangeOfString("appointment")!
-                    let index: Int = text.startIndex.distanceTo(range.startIndex)
-                    let int = index + 30
-                    let rtext = Range(start: text.startIndex.advancedBy(index - 20),
-                        end: text.startIndex.advancedBy(int))
-                    let snippString = text.substringWithRange(rtext)
-                    let foo : NSTimeInterval = (dictionary.objectForKey("internaldate") as? Double)! / 1000
-                    let date = NSDate(timeIntervalSince1970: foo)
-                    tame.setObject(snippString, forKey: "snippet")
-                    tame.setObject(dictionary.objectForKey("from")!, forKey:"from")
-                    tame.setObject(date.description, forKey: "date")
-                    self.tableArray.addObject(tame)
-                }
-            }
-        }
+       
+        //This function will make the tableView take the updated data from the now-populated array of messages (tableArray)
+        self.tableView.reloadData()
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:MeetingTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("MeetCell") as! MeetingTableViewCell

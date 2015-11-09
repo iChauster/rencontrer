@@ -585,7 +585,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.recontrer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.rencontrer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "recontrer/recontrer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -606,7 +606,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.recontrer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.rencontrer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "recontrer/recontrer-Bridging-Header.h";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "/Users/Ivan2/Documents/recontrer/google-api-objectivec-client/Source/**";
