@@ -72,16 +72,16 @@
 		30B4323E1071EEC7B3AFB438 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		350863935B0C98AD1C2891CB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CFEF214C614FB01918766C4A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDDBA1F41BE437F6005E05A1 /* recontrer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = recontrer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDDBA1F41BE437F6005E05A1 /* rencontrer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rencontrer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDBA1F71BE437F7005E05A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDDBA1FC1BE437F7005E05A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDDBA1FE1BE437F7005E05A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDDBA2011BE437F7005E05A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDDBA2031BE437F7005E05A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDDBA2081BE437F7005E05A1 /* recontrerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = recontrerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDDBA2081BE437F7005E05A1 /* rencontrer.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rencontrer.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDBA20C1BE437F7005E05A1 /* recontrerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recontrerTests.swift; sourceTree = "<group>"; };
 		EDDBA20E1BE437F7005E05A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDDBA2131BE437F7005E05A1 /* recontrerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = recontrerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDDBA2131BE437F7005E05A1 /* rencontrer.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rencontrer.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDBA2171BE437F7005E05A1 /* recontrerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recontrerUITests.swift; sourceTree = "<group>"; };
 		EDDBA2191BE437F7005E05A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDDBA2251BE43ED9005E05A1 /* GTL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GTL.xcodeproj; path = "google-api-objectivec-client/Source/GTL.xcodeproj"; sourceTree = SOURCE_ROOT; };
@@ -158,9 +158,9 @@
 		EDDBA1F51BE437F6005E05A1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EDDBA1F41BE437F6005E05A1 /* recontrer.app */,
-				EDDBA2081BE437F7005E05A1 /* recontrerTests.xctest */,
-				EDDBA2131BE437F7005E05A1 /* recontrerUITests.xctest */,
+				EDDBA1F41BE437F6005E05A1 /* rencontrer.app */,
+				EDDBA2081BE437F7005E05A1 /* rencontrer.xctest */,
+				EDDBA2131BE437F7005E05A1 /* rencontrer.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,9 +216,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EDDBA1F31BE437F6005E05A1 /* recontrer */ = {
+		EDDBA1F31BE437F6005E05A1 /* rencontrer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EDDBA21C1BE437F7005E05A1 /* Build configuration list for PBXNativeTarget "recontrer" */;
+			buildConfigurationList = EDDBA21C1BE437F7005E05A1 /* Build configuration list for PBXNativeTarget "rencontrer" */;
 			buildPhases = (
 				8E9682CFCDC35FAF9CFC2AA1 /* Check Pods Manifest.lock */,
 				EDDBA1F01BE437F6005E05A1 /* Sources */,
@@ -231,14 +231,14 @@
 			);
 			dependencies = (
 			);
-			name = recontrer;
+			name = rencontrer;
 			productName = recontrer;
-			productReference = EDDBA1F41BE437F6005E05A1 /* recontrer.app */;
+			productReference = EDDBA1F41BE437F6005E05A1 /* rencontrer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EDDBA2071BE437F7005E05A1 /* recontrerTests */ = {
+		EDDBA2071BE437F7005E05A1 /* rencontrerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EDDBA21F1BE437F7005E05A1 /* Build configuration list for PBXNativeTarget "recontrerTests" */;
+			buildConfigurationList = EDDBA21F1BE437F7005E05A1 /* Build configuration list for PBXNativeTarget "rencontrerTests" */;
 			buildPhases = (
 				EDDBA2041BE437F7005E05A1 /* Sources */,
 				EDDBA2051BE437F7005E05A1 /* Frameworks */,
@@ -249,14 +249,14 @@
 			dependencies = (
 				EDDBA20A1BE437F7005E05A1 /* PBXTargetDependency */,
 			);
-			name = recontrerTests;
+			name = rencontrerTests;
 			productName = recontrerTests;
-			productReference = EDDBA2081BE437F7005E05A1 /* recontrerTests.xctest */;
+			productReference = EDDBA2081BE437F7005E05A1 /* rencontrer.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EDDBA2121BE437F7005E05A1 /* recontrerUITests */ = {
+		EDDBA2121BE437F7005E05A1 /* rencontrerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EDDBA2221BE437F7005E05A1 /* Build configuration list for PBXNativeTarget "recontrerUITests" */;
+			buildConfigurationList = EDDBA2221BE437F7005E05A1 /* Build configuration list for PBXNativeTarget "rencontrerUITests" */;
 			buildPhases = (
 				EDDBA20F1BE437F7005E05A1 /* Sources */,
 				EDDBA2101BE437F7005E05A1 /* Frameworks */,
@@ -267,9 +267,9 @@
 			dependencies = (
 				EDDBA2151BE437F7005E05A1 /* PBXTargetDependency */,
 			);
-			name = recontrerUITests;
+			name = rencontrerUITests;
 			productName = recontrerUITests;
-			productReference = EDDBA2131BE437F7005E05A1 /* recontrerUITests.xctest */;
+			productReference = EDDBA2131BE437F7005E05A1 /* rencontrer.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -295,7 +295,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EDDBA1EF1BE437F6005E05A1 /* Build configuration list for PBXProject "recontrer" */;
+			buildConfigurationList = EDDBA1EF1BE437F6005E05A1 /* Build configuration list for PBXProject "rencontrer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -314,9 +314,9 @@
 			);
 			projectRoot = "";
 			targets = (
-				EDDBA1F31BE437F6005E05A1 /* recontrer */,
-				EDDBA2071BE437F7005E05A1 /* recontrerTests */,
-				EDDBA2121BE437F7005E05A1 /* recontrerUITests */,
+				EDDBA1F31BE437F6005E05A1 /* rencontrer */,
+				EDDBA2071BE437F7005E05A1 /* rencontrerTests */,
+				EDDBA2121BE437F7005E05A1 /* rencontrerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -461,12 +461,12 @@
 /* Begin PBXTargetDependency section */
 		EDDBA20A1BE437F7005E05A1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EDDBA1F31BE437F6005E05A1 /* recontrer */;
+			target = EDDBA1F31BE437F6005E05A1 /* rencontrer */;
 			targetProxy = EDDBA2091BE437F7005E05A1 /* PBXContainerItemProxy */;
 		};
 		EDDBA2151BE437F7005E05A1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EDDBA1F31BE437F6005E05A1 /* recontrer */;
+			target = EDDBA1F31BE437F6005E05A1 /* rencontrer */;
 			targetProxy = EDDBA2141BE437F7005E05A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -586,7 +586,7 @@
 					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.rencontrer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = rencontrer;
 				SWIFT_OBJC_BRIDGING_HEADER = "recontrer/recontrer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "/Users/Ivan2/Documents/recontrer/google-api-objectivec-client/Source/**";
@@ -607,7 +607,7 @@
 					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.rencontrer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = rencontrer;
 				SWIFT_OBJC_BRIDGING_HEADER = "recontrer/recontrer-Bridging-Header.h";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "/Users/Ivan2/Documents/recontrer/google-api-objectivec-client/Source/**";
 			};
@@ -620,8 +620,8 @@
 				INFOPLIST_FILE = recontrerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.recontrerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/recontrer.app/recontrer";
+				PRODUCT_NAME = rencontrer;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rencontrer.app/rencontrer";
 			};
 			name = Debug;
 		};
@@ -632,8 +632,8 @@
 				INFOPLIST_FILE = recontrerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.recontrerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/recontrer.app/recontrer";
+				PRODUCT_NAME = rencontrer;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rencontrer.app/rencontrer";
 			};
 			name = Release;
 		};
@@ -643,7 +643,7 @@
 				INFOPLIST_FILE = recontrerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.recontrerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = rencontrer;
 				TEST_TARGET_NAME = recontrer;
 				USES_XCTRUNNER = YES;
 			};
@@ -655,7 +655,7 @@
 				INFOPLIST_FILE = recontrerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.recontrerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = rencontrer;
 				TEST_TARGET_NAME = recontrer;
 				USES_XCTRUNNER = YES;
 			};
@@ -664,7 +664,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EDDBA1EF1BE437F6005E05A1 /* Build configuration list for PBXProject "recontrer" */ = {
+		EDDBA1EF1BE437F6005E05A1 /* Build configuration list for PBXProject "rencontrer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDDBA21A1BE437F7005E05A1 /* Debug */,
@@ -673,7 +673,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EDDBA21C1BE437F7005E05A1 /* Build configuration list for PBXNativeTarget "recontrer" */ = {
+		EDDBA21C1BE437F7005E05A1 /* Build configuration list for PBXNativeTarget "rencontrer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDDBA21D1BE437F7005E05A1 /* Debug */,
@@ -682,7 +682,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EDDBA21F1BE437F7005E05A1 /* Build configuration list for PBXNativeTarget "recontrerTests" */ = {
+		EDDBA21F1BE437F7005E05A1 /* Build configuration list for PBXNativeTarget "rencontrerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDDBA2201BE437F7005E05A1 /* Debug */,
@@ -691,7 +691,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EDDBA2221BE437F7005E05A1 /* Build configuration list for PBXNativeTarget "recontrerUITests" */ = {
+		EDDBA2221BE437F7005E05A1 /* Build configuration list for PBXNativeTarget "rencontrerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDDBA2231BE437F7005E05A1 /* Debug */,

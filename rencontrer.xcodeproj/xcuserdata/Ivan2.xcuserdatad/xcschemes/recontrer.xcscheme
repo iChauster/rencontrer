@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EDDBA1F31BE437F6005E05A1"
-               BuildableName = "recontrer.app"
-               BlueprintName = "recontrer"
-               ReferencedContainer = "container:recontrer.xcodeproj">
+               BuildableName = "rencontrer.app"
+               BlueprintName = "rencontrer"
+               ReferencedContainer = "container:rencontrer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EDDBA2071BE437F7005E05A1"
-               BuildableName = "recontrerTests.xctest"
-               BlueprintName = "recontrerTests"
-               ReferencedContainer = "container:recontrer.xcodeproj">
+               BuildableName = "rencontrer.xctest"
+               BlueprintName = "rencontrerTests"
+               ReferencedContainer = "container:rencontrer.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EDDBA2121BE437F7005E05A1"
-               BuildableName = "recontrerUITests.xctest"
-               BlueprintName = "recontrerUITests"
-               ReferencedContainer = "container:recontrer.xcodeproj">
+               BuildableName = "rencontrer.xctest"
+               BlueprintName = "rencontrerUITests"
+               ReferencedContainer = "container:rencontrer.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EDDBA1F31BE437F6005E05A1"
-            BuildableName = "recontrer.app"
-            BlueprintName = "recontrer"
-            ReferencedContainer = "container:recontrer.xcodeproj">
+            BuildableName = "rencontrer.app"
+            BlueprintName = "rencontrer"
+            ReferencedContainer = "container:rencontrer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EDDBA1F31BE437F6005E05A1"
-            BuildableName = "recontrer.app"
-            BlueprintName = "recontrer"
-            ReferencedContainer = "container:recontrer.xcodeproj">
+            BuildableName = "rencontrer.app"
+            BlueprintName = "rencontrer"
+            ReferencedContainer = "container:rencontrer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EDDBA1F31BE437F6005E05A1"
-            BuildableName = "recontrer.app"
-            BlueprintName = "recontrer"
-            ReferencedContainer = "container:recontrer.xcodeproj">
+            BuildableName = "rencontrer.app"
+            BlueprintName = "rencontrer"
+            ReferencedContainer = "container:rencontrer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
