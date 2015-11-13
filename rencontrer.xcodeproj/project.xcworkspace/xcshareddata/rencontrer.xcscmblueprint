@@ -1,0 +1,42 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "599A8A0883842D7C72F45543B14F519AB1803A4E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "22754eea-fc93-e339-b032-c1f495b90c16++2896" : {
+
+    },
+    "052f66bb-8366-e9ed-b056-95094e25c79e++505" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "22754eea-fc93-e339-b032-c1f495b90c16++2896" : 0,
+    "052f66bb-8366-e9ed-b056-95094e25c79e++505" : 0,
+    "599A8A0883842D7C72F45543B14F519AB1803A4E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C5E74565-8C52-4697-A0B3-7029F21C0CED",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "22754eea-fc93-e339-b032-c1f495b90c16++2896" : "rencontrer\/google-api-objectivec-client\/Source\/OAuth2\/",
+    "052f66bb-8366-e9ed-b056-95094e25c79e++505" : "rencontrer\/google-api-objectivec-client\/",
+    "599A8A0883842D7C72F45543B14F519AB1803A4E" : "rencontrer\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "rencontrer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "rencontrer.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/google-api-objectivec-client.googlecode.com\/svn",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "052f66bb-8366-e9ed-b056-95094e25c79e++505"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/gtm-oauth2.googlecode.com\/svn",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "22754eea-fc93-e339-b032-c1f495b90c16++2896"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iChauster\/rencontrer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "599A8A0883842D7C72F45543B14F519AB1803A4E"
+    }
+  ]
+}

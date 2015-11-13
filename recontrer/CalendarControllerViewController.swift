@@ -39,11 +39,12 @@ class CalendarControllerViewController: UIViewController, UITableViewDataSource,
         super.viewDidLoad()
         self.tableView!.dataSource = self;
         //setting the tableView Delegate to the controller
-        self.service.authorizer = GTMOAuth2ViewControllerTouch.authForGoogleFromKeychainForName(
+        if let auth = GTMOAuth2ViewControllerTouch.authForGoogleFromKeychainForName(
             kKeychainItemName,
             clientID: kClientID,
-            clientSecret: kClientSecret
-        )
+            clientSecret: kClientSecret) {
+                service.authorizer = auth
+        }
         //setting up security gmail api
         
     }

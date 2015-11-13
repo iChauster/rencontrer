@@ -25,6 +25,8 @@
   #ifndef GTM_USE_SESSION_FETCHER
     #define GTM_USE_SESSION_FETCHER 1
   #endif
+
+  #define GTMOAUTH2AUTHENTICATION_DEPRECATE_OLD_ENUMS 1
 #endif
 
 #if GTM_USE_SESSION_FETCHER
@@ -66,15 +68,22 @@ extern NSString *const kGTMOAuth2ErrorMessageKey;
 extern NSString *const kGTMOAuth2ErrorRequestKey;
 extern NSString *const kGTMOAuth2ErrorJSONKey;
 
-enum {
+typedef NS_ENUM(NSInteger, GTMOAuth2Error) {
   // Error code indicating that the window was prematurely closed
-  kGTMOAuth2ErrorWindowClosed          = -1000,
-  kGTMOAuth2ErrorAuthorizationFailed   = -1001,
-  kGTMOAuth2ErrorTokenExpired          = -1002,
-  kGTMOAuth2ErrorTokenUnavailable      = -1003,
-  kGTMOAuth2ErrorUnauthorizableRequest = -1004
+  GTMOAuth2ErrorWindowClosed          = -1000,
+  GTMOAuth2ErrorAuthorizationFailed   = -1001,
+  GTMOAuth2ErrorTokenExpired          = -1002,
+  GTMOAuth2ErrorTokenUnavailable      = -1003,
+  GTMOAuth2ErrorUnauthorizableRequest = -1004
 };
 
+#if !GTMOAUTH2AUTHENTICATION_DEPRECATE_OLD_ENUMS
+#define kGTMOAuth2ErrorWindowClosed          GTMOAuth2ErrorWindowClosed
+#define kGTMOAuth2ErrorAuthorizationFailed   GTMOAuth2ErrorAuthorizationFailed
+#define kGTMOAuth2ErrorTokenExpired          GTMOAuth2ErrorTokenExpired
+#define kGTMOAuth2ErrorTokenUnavailable      GTMOAuth2ErrorTokenUnavailable
+#define kGTMOAuth2ErrorUnauthorizableRequest GTMOAuth2ErrorUnauthorizableRequest
+#endif
 
 // Notifications for token fetches
 extern NSString *const kGTMOAuth2FetchStarted;
@@ -146,8 +155,6 @@ extern NSString *const kGTMOAuth2NetworkFound;
 
   id <GTMOAuth2FetcherServiceProtocol> fetcherService_; // WEAK
 
-  Class parserClass_;
-
   BOOL shouldAuthorizeAllRequests_;
 
   // arbitrary data retained for the user
@@ -185,7 +192,9 @@ extern NSString *const kGTMOAuth2NetworkFound;
 @property (retain) NSDictionary *additionalGrantTypeRequestParameters;
 
 // Response properties
-@property (retain) NSMutableDictionary *parameters;
+
+// Dictionary of response and other properties; not KVO compliant
+@property (readonly) NSDictionary *parameters;
 
 @property (retain) NSString *accessToken;
 @property (retain) NSString *refreshToken;
@@ -239,11 +248,6 @@ extern NSString *const kGTMOAuth2NetworkFound;
 // Fetcher service objects retain authorizations, so this is weak to avoid
 // circular retains.
 @property (assign) id <GTMOAuth2FetcherServiceProtocol> fetcherService; // WEAK
-
-// Alternative JSON parsing class; this should implement the
-// GTMOAuth2ParserClass informal protocol. If this property is
-// not set, the class SBJSON must be available in the runtime.
-@property (assign) Class parserClass;
 
 // Key for the response parameter used for the authorization header; by default,
 // "access_token" is used, but some servers may expect alternatives, like

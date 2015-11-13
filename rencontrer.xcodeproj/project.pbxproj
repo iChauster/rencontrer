@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C195084775391916970CD058 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFEF214C614FB01918766C4A /* Pods.framework */; };
+		ED795AE61BF54D09000764E0 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ED795AE51BF54D08000764E0 /* libc++.tbd */; };
+		ED795AE71BF54E04000764E0 /* libGTLTouchStaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED795AE01BF548D5000764E0 /* libGTLTouchStaticLib.a */; };
 		EDDBA1F81BE437F7005E05A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDBA1F71BE437F7005E05A1 /* AppDelegate.swift */; };
 		EDDBA1FD1BE437F7005E05A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDBA1FB1BE437F7005E05A1 /* Main.storyboard */; };
 		EDDBA1FF1BE437F7005E05A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDBA1FE1BE437F7005E05A1 /* Assets.xcassets */; };
 		EDDBA2021BE437F7005E05A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDBA2001BE437F7005E05A1 /* LaunchScreen.storyboard */; };
 		EDDBA20D1BE437F7005E05A1 /* recontrerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDBA20C1BE437F7005E05A1 /* recontrerTests.swift */; };
 		EDDBA2181BE437F7005E05A1 /* recontrerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDBA2171BE437F7005E05A1 /* recontrerUITests.swift */; };
-		EDDBA2341BE43F02005E05A1 /* libGTLTouchStaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDBA22F1BE43ED9005E05A1 /* libGTLTouchStaticLib.a */; };
 		EDDBA2371BE43F02005E05A1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDBA2351BE43F02005E05A1 /* Security.framework */; };
 		EDDBA2381BE43F02005E05A1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDBA2361BE43F02005E05A1 /* SystemConfiguration.framework */; };
 		EDDBA23A1BE43FA6005E05A1 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDDBA2391BE43FA6005E05A1 /* GTMOAuth2ViewTouch.xib */; };
@@ -24,6 +25,76 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		ED795ADF1BF548D5000764E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED795ACE1BF40CBC000764E0 /* GTL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4F12027C11A4CA2F00BEB470;
+			remoteInfo = GTLTouchStaticLib;
+		};
+		ED795AE11BF548D5000764E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED795ACE1BF40CBC000764E0 /* GTL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4F12027D11A4CA2F00BEB470;
+			remoteInfo = GTLUnitTests;
+		};
+		ED795AE31BF548D5000764E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED795ACE1BF40CBC000764E0 /* GTL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4F1AD9020B71603F00DC0485;
+			remoteInfo = DevelopmentTestTool;
+		};
+		ED795AF21BF552AB000764E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED795AE81BF552AA000764E0 /* GTMSessionFetcherCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4F5566C81862981000D6D62C;
+			remoteInfo = FetcherMacTests;
+		};
+		ED795AF41BF552AB000764E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED795AE81BF552AA000764E0 /* GTMSessionFetcherCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4F34A21B187CCBB50012E91E;
+			remoteInfo = FetcherOSXTestApp;
+		};
+		ED795AF61BF552AB000764E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED795AE81BF552AA000764E0 /* GTMSessionFetcherCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8EC5668D18AAFB1200E2C97D;
+			remoteInfo = FetcheriOSTestApp;
+		};
+		ED795AF81BF552AB000764E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED795AE81BF552AA000764E0 /* GTMSessionFetcherCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8EC566A518AAFB1200E2C97D;
+			remoteInfo = FetcheriOSTests;
+		};
+		ED795AFA1BF552AB000764E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED795AE81BF552AA000764E0 /* GTMSessionFetcherCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4FA025621BB21EAB00BB255C;
+			remoteInfo = GTMSessionFetcherOSX;
+		};
+		ED795AFC1BF552AB000764E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED795AE81BF552AA000764E0 /* GTMSessionFetcherCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4FEE14271BB22328002ACBF8;
+			remoteInfo = GTMSessionFetcherIOS;
+		};
+		ED795AFE1BF552AB000764E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED795AE81BF552AA000764E0 /* GTMSessionFetcherCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ED7959E21BF2A7CB000764E0;
+			remoteInfo = GTMSessionFetcherLib;
+		};
 		EDDBA2091BE437F7005E05A1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EDDBA1EC1BE437F6005E05A1 /* Project object */;
@@ -38,40 +109,15 @@
 			remoteGlobalIDString = EDDBA1F31BE437F6005E05A1;
 			remoteInfo = recontrer;
 		};
-		EDDBA22C1BE43ED9005E05A1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EDDBA2251BE43ED9005E05A1 /* GTL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4F38F6A60B66E91D00B24B81;
-			remoteInfo = GTLFramework;
-		};
-		EDDBA22E1BE43ED9005E05A1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EDDBA2251BE43ED9005E05A1 /* GTL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4F12027C11A4CA2F00BEB470;
-			remoteInfo = GTLTouchStaticLib;
-		};
-		EDDBA2301BE43ED9005E05A1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EDDBA2251BE43ED9005E05A1 /* GTL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4F12027D11A4CA2F00BEB470;
-			remoteInfo = GTLUnitTests;
-		};
-		EDDBA2321BE43ED9005E05A1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EDDBA2251BE43ED9005E05A1 /* GTL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4F1AD9020B71603F00DC0485;
-			remoteInfo = DevelopmentTestTool;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		30B4323E1071EEC7B3AFB438 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		350863935B0C98AD1C2891CB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CFEF214C614FB01918766C4A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED795ACE1BF40CBC000764E0 /* GTL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GTL.xcodeproj; path = "../google-api-objectivec-client/Source/GTL.xcodeproj"; sourceTree = "<group>"; };
+		ED795AE51BF54D08000764E0 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		ED795AE81BF552AA000764E0 /* GTMSessionFetcherCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GTMSessionFetcherCore.xcodeproj; path = "gtm-session-fetcher/Source/GTMSessionFetcherCore.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		EDDBA1F41BE437F6005E05A1 /* rencontrer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rencontrer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDBA1F71BE437F7005E05A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDDBA1FC1BE437F7005E05A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,7 +130,6 @@
 		EDDBA2131BE437F7005E05A1 /* rencontrer.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rencontrer.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDBA2171BE437F7005E05A1 /* recontrerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recontrerUITests.swift; sourceTree = "<group>"; };
 		EDDBA2191BE437F7005E05A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDDBA2251BE43ED9005E05A1 /* GTL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GTL.xcodeproj; path = "google-api-objectivec-client/Source/GTL.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		EDDBA2351BE43F02005E05A1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		EDDBA2361BE43F02005E05A1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EDDBA2391BE43FA6005E05A1 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GTMOAuth2ViewTouch.xib; path = "google-api-objectivec-client/Source/OAuth2/Touch/GTMOAuth2ViewTouch.xib"; sourceTree = SOURCE_ROOT; };
@@ -100,9 +145,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED795AE71BF54E04000764E0 /* libGTLTouchStaticLib.a in Frameworks */,
+				ED795AE61BF54D09000764E0 /* libc++.tbd in Frameworks */,
 				EDDBA2371BE43F02005E05A1 /* Security.framework in Frameworks */,
 				EDDBA2381BE43F02005E05A1 /* SystemConfiguration.framework in Frameworks */,
-				EDDBA2341BE43F02005E05A1 /* libGTLTouchStaticLib.a in Frameworks */,
 				C195084775391916970CD058 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +173,7 @@
 		0F8B9C91222081F9F1549C54 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED795AE51BF54D08000764E0 /* libc++.tbd */,
 				CFEF214C614FB01918766C4A /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -139,6 +186,30 @@
 				350863935B0C98AD1C2891CB /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		ED795ADA1BF548D4000764E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED795AE01BF548D5000764E0 /* libGTLTouchStaticLib.a */,
+				ED795AE21BF548D5000764E0 /* GTLUnitTests.xctest */,
+				ED795AE41BF548D5000764E0 /* DevelopmentTestTool */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED795AE91BF552AA000764E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED795AF31BF552AB000764E0 /* FetcherMacTests.xctest */,
+				ED795AF51BF552AB000764E0 /* FetcherOSXTestApp.app */,
+				ED795AF71BF552AB000764E0 /* FetcheriOSTestApp.app */,
+				ED795AF91BF552AB000764E0 /* FetcheriOSTests.xctest */,
+				ED795AFB1BF552AB000764E0 /* GTMSessionFetcherOSX.framework */,
+				ED795AFD1BF552AB000764E0 /* GTMSessionFetcherIOS.framework */,
+				ED795AFF1BF552AB000764E0 /* libGTMSessionFetcherLib.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		EDDBA1EB1BE437F6005E05A1 = {
@@ -178,8 +249,9 @@
 				EDDBA2391BE43FA6005E05A1 /* GTMOAuth2ViewTouch.xib */,
 				EDDBA23B1BE43FDF005E05A1 /* GTLGmail.h */,
 				EDDBA23D1BE44000005E05A1 /* GTLGmail_Sources.m */,
-				EDDBA2251BE43ED9005E05A1 /* GTL.xcodeproj */,
 				EDDBA23C1BE44000005E05A1 /* recontrer-Bridging-Header.h */,
+				ED795AE81BF552AA000764E0 /* GTMSessionFetcherCore.xcodeproj */,
+				ED795ACE1BF40CBC000764E0 /* GTL.xcodeproj */,
 			);
 			path = recontrer;
 			sourceTree = "<group>";
@@ -200,17 +272,6 @@
 				EDDBA2191BE437F7005E05A1 /* Info.plist */,
 			);
 			path = recontrerUITests;
-			sourceTree = "<group>";
-		};
-		EDDBA2261BE43ED9005E05A1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EDDBA22D1BE43ED9005E05A1 /* GTL.framework */,
-				EDDBA22F1BE43ED9005E05A1 /* libGTLTouchStaticLib.a */,
-				EDDBA2311BE43ED9005E05A1 /* GTLUnitTests.xctest */,
-				EDDBA2331BE43ED9005E05A1 /* DevelopmentTestTool */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,8 +369,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = EDDBA2261BE43ED9005E05A1 /* Products */;
-					ProjectRef = EDDBA2251BE43ED9005E05A1 /* GTL.xcodeproj */;
+					ProductGroup = ED795ADA1BF548D4000764E0 /* Products */;
+					ProjectRef = ED795ACE1BF40CBC000764E0 /* GTL.xcodeproj */;
+				},
+				{
+					ProductGroup = ED795AE91BF552AA000764E0 /* Products */;
+					ProjectRef = ED795AE81BF552AA000764E0 /* GTMSessionFetcherCore.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -322,32 +387,74 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		EDDBA22D1BE43ED9005E05A1 /* GTL.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GTL.framework;
-			remoteRef = EDDBA22C1BE43ED9005E05A1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		EDDBA22F1BE43ED9005E05A1 /* libGTLTouchStaticLib.a */ = {
+		ED795AE01BF548D5000764E0 /* libGTLTouchStaticLib.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libGTLTouchStaticLib.a;
-			remoteRef = EDDBA22E1BE43ED9005E05A1 /* PBXContainerItemProxy */;
+			remoteRef = ED795ADF1BF548D5000764E0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EDDBA2311BE43ED9005E05A1 /* GTLUnitTests.xctest */ = {
+		ED795AE21BF548D5000764E0 /* GTLUnitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = GTLUnitTests.xctest;
-			remoteRef = EDDBA2301BE43ED9005E05A1 /* PBXContainerItemProxy */;
+			remoteRef = ED795AE11BF548D5000764E0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EDDBA2331BE43ED9005E05A1 /* DevelopmentTestTool */ = {
+		ED795AE41BF548D5000764E0 /* DevelopmentTestTool */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = DevelopmentTestTool;
-			remoteRef = EDDBA2321BE43ED9005E05A1 /* PBXContainerItemProxy */;
+			remoteRef = ED795AE31BF548D5000764E0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ED795AF31BF552AB000764E0 /* FetcherMacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FetcherMacTests.xctest;
+			remoteRef = ED795AF21BF552AB000764E0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ED795AF51BF552AB000764E0 /* FetcherOSXTestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = FetcherOSXTestApp.app;
+			remoteRef = ED795AF41BF552AB000764E0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ED795AF71BF552AB000764E0 /* FetcheriOSTestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = FetcheriOSTestApp.app;
+			remoteRef = ED795AF61BF552AB000764E0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ED795AF91BF552AB000764E0 /* FetcheriOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FetcheriOSTests.xctest;
+			remoteRef = ED795AF81BF552AB000764E0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ED795AFB1BF552AB000764E0 /* GTMSessionFetcherOSX.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GTMSessionFetcherOSX.framework;
+			remoteRef = ED795AFA1BF552AB000764E0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ED795AFD1BF552AB000764E0 /* GTMSessionFetcherIOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GTMSessionFetcherIOS.framework;
+			remoteRef = ED795AFC1BF552AB000764E0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ED795AFF1BF552AB000764E0 /* libGTMSessionFetcherLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGTMSessionFetcherLib.a;
+			remoteRef = ED795AFE1BF552AB000764E0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -581,6 +688,7 @@
 				INFOPLIST_FILE = recontrer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				"OTHER_LDFLAGS[arch=*]" = (
 					"-ObjC",
 					"-all_load",
@@ -589,7 +697,7 @@
 				PRODUCT_NAME = rencontrer;
 				SWIFT_OBJC_BRIDGING_HEADER = "recontrer/recontrer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				"USER_HEADER_SEARCH_PATHS[arch=*]" = "/Users/Ivan2/Documents/recontrer/google-api-objectivec-client/Source/**";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "/Users/Ivan2/Documents/rencontrer/gtm-session-fetcher/Source/ /Users/Ivan2/documents/rencontrer/google-api-objectivec-client/source/**";
 			};
 			name = Debug;
 		};
@@ -602,6 +710,7 @@
 				INFOPLIST_FILE = recontrer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				"OTHER_LDFLAGS[arch=*]" = (
 					"-ObjC",
 					"-all_load",
@@ -609,7 +718,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ichauster.rencontrer;
 				PRODUCT_NAME = rencontrer;
 				SWIFT_OBJC_BRIDGING_HEADER = "recontrer/recontrer-Bridging-Header.h";
-				"USER_HEADER_SEARCH_PATHS[arch=*]" = "/Users/Ivan2/Documents/recontrer/google-api-objectivec-client/Source/**";
 			};
 			name = Release;
 		};

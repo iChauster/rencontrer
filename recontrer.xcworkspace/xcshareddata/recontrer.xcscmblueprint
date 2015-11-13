@@ -13,16 +13,18 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "052f66bb-8366-e9ed-b056-95094e25c79e++505" : 0,
+    "22754eea-fc93-e339-b032-c1f495b90c16++2896" : 0,
     "b3aa69f0-f65c-a609-0a27-78855af037c1++2896" : 0,
     "599A8A0883842D7C72F45543B14F519AB1803A4E" : 0,
-    "22754eea-fc93-e339-b032-c1f495b90c16++2896" : 0
+    "FAD0B99C3A0EB9F5EAC9FDFC4A76471FB31CBC6F" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FE785462-93CB-4905-B047-15B96E1CEB08",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "052f66bb-8366-e9ed-b056-95094e25c79e++505" : "recontrer\/google-api-objectivec-client\/",
+    "22754eea-fc93-e339-b032-c1f495b90c16++2896" : "recontrer\/google-api-objectivec-client\/Source\/OAuth2\/",
     "b3aa69f0-f65c-a609-0a27-78855af037c1++2896" : "recontrer\/google-api-objectivec-client\/Source\/HTTPFetcher\/",
     "599A8A0883842D7C72F45543B14F519AB1803A4E" : "recontrer\/",
-    "22754eea-fc93-e339-b032-c1f495b90c16++2896" : "recontrer\/google-api-objectivec-client\/Source\/OAuth2\/"
+    "FAD0B99C3A0EB9F5EAC9FDFC4A76471FB31CBC6F" : "rencontrer\/gtm-session-fetcher\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "recontrer",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -42,6 +44,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iChauster\/rencontrer.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "599A8A0883842D7C72F45543B14F519AB1803A4E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/google\/gtm-session-fetcher.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FAD0B99C3A0EB9F5EAC9FDFC4A76471FB31CBC6F"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/gtm-http-fetcher.googlecode.com\/svn",
